@@ -20,7 +20,7 @@ function Login() {
 
       const res = await axios.post(
 
-        "http://localhost:5000/api/auth/login",
+        "https://agritech-platform-qcrq.onrender.com",
 
         {
           email,
@@ -44,15 +44,16 @@ function Login() {
       navigate("/dashboard");
 
     }
+catch (error) {
 
-    catch (error) {
+  console.log(error);
 
-      alert(
-        error.response?.data?.message ||
-        "Login failed"
-      );
+  alert(
+    JSON.stringify(error.response?.data) ||
+    "Login failed"
+  );
 
-    }
+}
 
   };
 
