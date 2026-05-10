@@ -17,16 +17,13 @@ function Register() {
     try {
 
       const res = await axios.post(
-
-        "https://agritech-platform-qcrq.onrender.com",
-
-        {
-          name,
-          email,
-          password,
-        }
-
-      );
+  "https://agritech-platform-qcrq.onrender.com/api/auth/register",
+  {
+    name,
+    email,
+    password,
+  }
+);
 
       alert(res.data.message);
 

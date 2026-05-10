@@ -20,7 +20,7 @@ function Login() {
 
       const res = await axios.post(
 
-        "https://agritech-platform-qcrq.onrender.com",
+        "https://agritech-platform-qcrq.onrender.com/api/auth/login",
 
         {
           email,
