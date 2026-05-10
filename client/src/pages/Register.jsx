@@ -18,7 +18,7 @@ function Register() {
 
       const res = await axios.post(
 
-        "http://localhost:5000/api/auth/register",
+        "https://agritech-platform-qcrq.onrender.com",
 
         {
           name,
