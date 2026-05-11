@@ -80,33 +80,31 @@ catch (error) {
 
         <div className="space-y-6">
 
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-5 rounded-2xl border-2 border-gray-300 text-2xl"
-            required
-          />
+         <input
+  type="email"
+  placeholder="Enter Email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+  style={{ color: 'black' }}
+  className="text-black"
+/>
 
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-5 rounded-2xl border-2 border-gray-300 text-2xl"
-            required
-          />
-
+<input
+  type="password"
+  placeholder="Enter Password"
+  value={password}
+  onChange={(e) => setPassword(e.target.value)}
+  style={{ color: 'black' }}
+  className="text-black"
+/>
           <button
-            type="submit"
-            className="w-full bg-green-700 hover:bg-green-800 text-white text-3xl font-bold py-5 rounded-2xl"
-          >
-
-            Login
-
-          </button>
-
+  style={{
+    color: 'white',
+    backgroundColor: 'green'
+  }}
+>
+  Login
+</button>
         </div>
 
       </form>

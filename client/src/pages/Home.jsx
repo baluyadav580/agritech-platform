@@ -113,35 +113,99 @@ const [darkMode, setDarkMode] = useState(false);
           🌐 Select Your Language
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        ```jsx id="langfix"
+<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          <button className="border-4 border-gray-200 rounded-3xl py-8 text-center hover:border-green-600 transition-all">
-            <h3 className="text-5xl font-bold text-gray-700 mb-3">
-              తెలుగు
-              </h3>
-            <p className="text-2xl text-gray-500">
-              Telugu
-            </p>
-          </button>
+  <button
+    onClick={() => setLanguage("Telugu")}
+    className={`rounded-3xl py-8 text-center border-4 transition-all ${
+      language === "Telugu"
+        ? "border-green-700 bg-green-50"
+        : "border-gray-200 hover:border-green-600"
+    }`}
+  >
+    <h3
+      className={`text-5xl font-bold mb-3 ${
+        language === "Telugu"
+          ? "text-green-700"
+          : "text-gray-700"
+      }`}
+    >
+      తెలుగు
+    </h3>
 
-          <button className="border-4 border-gray-200 rounded-3xl py-8 text-center hover:border-green-600 transition-all">
-            <h3 className="text-5xl font-bold text-gray-700 mb-3">
-              हिन्दी
-            </h3>
-            <p className="text-2xl text-gray-500">
-              Hindi
-            </p>
-          </button>
-                    <button className="border-4 border-green-700 rounded-3xl py-8 text-center bg-green-50">
-            <h3 className="text-5xl font-bold text-green-700 mb-3">
-              English
-            </h3>
-            <p className="text-2xl text-green-700 font-semibold">
-              English
-            </p>
-          </button>
+    <p
+      className={`text-2xl ${
+        language === "Telugu"
+          ? "text-green-700 font-semibold"
+          : "text-gray-500"
+      }`}
+    >
+      Telugu
+    </p>
+  </button>
 
-        </div>
+  <button
+    onClick={() => setLanguage("Hindi")}
+    className={`rounded-3xl py-8 text-center border-4 transition-all ${
+      language === "Hindi"
+        ? "border-green-700 bg-green-50"
+        : "border-gray-200 hover:border-green-600"
+    }`}
+  >
+    <h3
+      className={`text-5xl font-bold mb-3 ${
+        language === "Hindi"
+          ? "text-green-700"
+          : "text-gray-700"
+      }`}
+    >
+      हिन्दी
+    </h3>
+
+    <p
+      className={`text-2xl ${
+        language === "Hindi"
+          ? "text-green-700 font-semibold"
+          : "text-gray-500"
+      }`}
+    >
+      Hindi
+    </p>
+  </button>
+
+  <button
+    onClick={() => setLanguage("English")}
+    className={`rounded-3xl py-8 text-center border-4 transition-all ${
+      language === "English"
+        ? "border-green-700 bg-green-50"
+        : "border-gray-200 hover:border-green-600"
+    }`}
+  >
+    <h3
+      className={`text-5xl font-bold mb-3 ${
+        language === "English"
+          ? "text-green-700"
+          : "text-gray-700"
+      }`}
+    >
+      English
+    </h3>
+
+    <p
+      className={`text-2xl ${
+        language === "English"
+          ? "text-green-700 font-semibold"
+          : "text-gray-500"
+      }`}
+    >
+      English
+    </p>
+  </button>
+
+</div>
+```
+
 
       </div>
 

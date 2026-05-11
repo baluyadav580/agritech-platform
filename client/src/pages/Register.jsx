@@ -1,13 +1,11 @@
+```jsx
 import { useState } from "react";
-
 import axios from "axios";
 
 function Register() {
 
   const [name, setName] = useState("");
-
   const [email, setEmail] = useState("");
-
   const [password, setPassword] = useState("");
 
   const handleRegister = async (e) => {
@@ -17,25 +15,21 @@ function Register() {
     try {
 
       const res = await axios.post(
-  "https://agritech-platform-qcrq.onrender.com/api/auth/register",
-  {
-    name,
-    email,
-    password,
-  }
-);
+        "https://agritech-platform-qcrq.onrender.com/api/auth/register",
+        {
+          name,
+          email,
+          password,
+        }
+      );
 
       alert(res.data.message);
 
       setName("");
-
       setEmail("");
-
       setPassword("");
 
-    }
-
-    catch (error) {
+    } catch (error) {
 
       alert(
         error.response?.data?.message ||
@@ -43,7 +37,6 @@ function Register() {
       );
 
     }
-
   };
 
   return (
@@ -61,47 +54,43 @@ function Register() {
             📝
           </div>
 
-         <h1 className="text-5xl font-bold text-black">
-  Register
-</h1>
+          <h1 className="text-5xl font-bold text-black">
+            Register
+          </h1>
+
         </div>
 
         <div className="space-y-6">
 
           <input
             type="text"
-            placeholder="Full Name"
+            placeholder="Enter Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full p-5 rounded-2xl border-2 border-gray-300 text-2xl"
-            required
+            className="w-full p-4 border border-green-500 rounded-xl text-black placeholder-gray-500"
           />
 
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Enter Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-5 rounded-2xl border-2 border-gray-300 text-2xl"
-            required
+            className="w-full p-4 border border-green-500 rounded-xl text-black placeholder-gray-500"
           />
 
           <input
             type="password"
-            placeholder="Password"
+            placeholder="Enter Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full p-5 rounded-2xl border-2 border-gray-300 text-2xl"
-            required
+            className="w-full p-4 border border-green-500 rounded-xl text-black placeholder-gray-500"
           />
 
           <button
             type="submit"
-            className="w-full bg-green-700 hover:bg-green-800 text-white text-3xl font-bold py-5 rounded-2xl"
+            className="w-full bg-green-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition"
           >
-
             Register
-
           </button>
 
         </div>
@@ -111,7 +100,7 @@ function Register() {
     </div>
 
   );
-
 }
 
 export default Register;
+```
