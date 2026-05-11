@@ -61,10 +61,9 @@ function Register() {
             📝
           </div>
 
-          <h1 className="text-5xl font-bold text-green-700">
-            Register
-          </h1>
-
+         <h1 className="text-5xl font-bold text-black">
+  Register
+</h1>
         </div>
 
         <div className="space-y-6">
