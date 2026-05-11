@@ -1,3 +1,4 @@
+import SchemeForm from "./pages/SchemeForm";
 import { useState } from "react";
 
 import {
@@ -5,7 +6,6 @@ import {
   Route,
 } from "react-router-dom";
 
-import SchemeForm from "./pages/SchemeForm";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import Sidebar from "./components/Sidebar";
@@ -69,13 +69,15 @@ function App() {
 
         <Routes>
 
-          <Route path="/scheme" element={<SchemeForm />} />
 
           <Route path="/" element={<Home />} />
 
           <Route path="/login" element={<Login />} />
 
           <Route path="/register" element={<Register />} />
+
+          
+          <Route path="/scheme" element={<SchemeForm />} />
 
           <Route
             path="/dashboard"
