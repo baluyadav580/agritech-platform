@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 
+import SchemeForm from "./pages/SchemeForm";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import Sidebar from "./components/Sidebar";
@@ -67,6 +68,8 @@ function App() {
       <div className="lg:ml-[280px] min-h-screen">
 
         <Routes>
+
+          <Route path="/scheme" element={<SchemeForm />} />
 
           <Route path="/" element={<Home />} />
 
